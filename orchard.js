@@ -51,16 +51,31 @@ const pinkPrice = .55
 
 // CODE HERE
 
-let totalAcres = 0; 
-
-for ( let i = 0; i <) {
-
-}
-
+let totalAcres = 0;  // we needed to declare a totalAcres variable to have a place to put the end result of calculaitng the total number of acres - you set the variable to 0 to be able to start your calculations with a fresh slate
+let fujiTotal = 0; // the variable fujiTotal is declared to be used in calculating the total amount of acres picked specifically in the fujiAcres array 
+let galaTotal = 0; // the variable galaTotal is declared to be used in calculating the total amount of acres picked specifically in the galaAcres array 
+let pinkTotal = 0; // the variable pinkTotal is declared to be used in calculating the total amount of acres picked specifically in the pinkAcres array 
 
 
+// the first statement of the for loop displays the index at which you want to start the loop
+// the condition of the for loop shows that the index of i is always going to be less than the length of the array - therefore if one of the arrays is changed, or an index is added, the for loop will always account for the entire length of the array
+// the last staement in the for loop displays i++, this will cause the loop to keep moving forward one at a time throughout the arrays
+for ( let i = 0; i < fujiAcres.length; i++) {
+ fujiTotal = fujiAcres[i] + fujiTotal;  // the loop is going to run through until the length of the array is complete - fujiAcres[i] is going to run through the loop and the index is going to change everytime - the first time the loop runs the code will look like this: fujiTotal = fujiAcres[0] + 0 
+ // - because the first statement is let i = 0 , the loop will run starting with the first index at 0 , which in the fujiAcres array is 2 
+ // this means that the first time it runs the code displays fujiTotal = 2 + 0 
+ // the body of the for loop continues to repeat until the array is over - the index will go up everytime until it adds up all of the acres inside the array
+ // this action then repeats itself for the 2 other arrays until we know know how many acres of apples were picked for all of the seperate orchards
+} for (let i = 0; i < galaAcres.length; i++) {
+    galaTotal = galaTotal + galaAcres[i];
+ } for (let i = 0; i < pinkAcres.length; i++) {
+        pinkTotal = pinkTotal + pinkAcres[i];
+ } totalAcres = galaTotal + fujiTotal + pinkTotal;
+// we then find the totalAcres by adding up the totalAcres picked in the 3 seperate arrays, which gives us 63 through console.log(totalAcres)
 
-
+console.log(fujiTotal);
+console.log(galaTotal);
+console.log(pinkTotal);
 
 console.log(totalAcres);
 
@@ -82,11 +97,11 @@ console.log(totalAcres);
 // CODE HERE
 let averageDailyAcres = 0;
 
-for() [
+// for() 
 
-]
 
-console.log(averageDailyAcres);
+
+// console.log(averageDailyAcres);
 
 
 
