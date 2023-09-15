@@ -96,14 +96,18 @@ console.log(totalAcres);
 
 // CODE HERE
 let averageDailyAcres = 0;
+// first you need to declare a variale called averageDailyAcres to then be able to assign the answer to it 
+ 
 
-// for() 
+averageDailyAcres = totalAcres / 21;
+// since in the previous problem we already calculated the variable totalAcres, we just need to find the average 
+// you calculate the average of something by taking the total and dividing it by the amount of numbers that are in the set 
+// since our totalAcres is 63 this code is dividing that by the total amount of days they picked apples, which is 21
+// therefore 63 / 21 is 3 - so there is an average of 3 acres of apples that are being picked each day 
 
 
-
-// console.log(averageDailyAcres);
-
-
+console.log(averageDailyAcres);
+// this code displayes the averageDailyAcres to the console 
 
 
 
