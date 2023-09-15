@@ -51,6 +51,18 @@ const pinkPrice = .55
 
 // CODE HERE
 
+let totalAcres = 0; 
+
+for ( let i = 0; i <) {
+
+}
+
+
+
+
+
+
+console.log(totalAcres);
 
 
 
@@ -68,6 +80,14 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+let averageDailyAcres = 0;
+
+for() [
+
+]
+
+console.log(averageDailyAcres);
+
 
 
 
