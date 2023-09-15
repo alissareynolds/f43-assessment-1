@@ -51,6 +51,7 @@ const pinkPrice = .55
 
 // CODE HERE
 
+// we initilize these variables at zero to use them as a counter 
 let totalAcres = 0;  // we needed to declare a totalAcres variable to have a place to put the end result of calculaitng the total number of acres - you set the variable to 0 to be able to start your calculations with a fresh slate
 let fujiTotal = 0; // the variable fujiTotal is declared to be used in calculating the total amount of acres picked specifically in the fujiAcres array 
 let galaTotal = 0; // the variable galaTotal is declared to be used in calculating the total amount of acres picked specifically in the galaAcres array 
@@ -144,8 +145,15 @@ console.log(averageDailyAcres);
 let acresLeft = 174 
 let days = 0
 
-// CODE HERE
+// CODE HERE // we need to first set the conditon of the while loop so that the loop will run as long as the acersLeft is above 0 - there is no need to keep going if there is no more acres to pick 
+while (acresLeft > 0) {
+days = days + 1;   // we are adding 1 to the days variable 
+ acresLeft-= averageDailyAcres // this code is used to subtract the daily acres from the acres that are left, in order to find out how many days it will take to pick the acres
+ // the code is taking the daily average of how long it takes to pick an apple to predict how many days it will take to pick 174 acres of apples 
+} 
 
+console.log("acres", acresLeft);
+console.log("days", days);
 
 
 // PROBLEM 4
@@ -174,9 +182,15 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = []
+let galaTons = []
+let pinkTons = []
+
+let oneAcre = 6.5;
+
+
+
+
 
 
 
