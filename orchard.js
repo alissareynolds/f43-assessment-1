@@ -148,7 +148,7 @@ let days = 0
 // CODE HERE // we need to first set the conditon of the while loop so that the loop will run as long as the acersLeft is above 0 - there is no need to keep going if there is no more acres to pick 
 while (acresLeft > 0) {
 days = days + 1;   // we are adding 1 to the days variable 
- acresLeft-= averageDailyAcres // this code is used to subtract the daily acres from the acres that are left, in order to find out how many days it will take to pick the acres
+ acresLeft-= averageDailyAcres // this code is used to subtract the daily acres from the acres that are left, in order to find out how many days it will take to pick 174 acres
  // the code is taking the daily average of how long it takes to pick an apple to predict how many days it will take to pick 174 acres of apples 
 } 
 
@@ -182,16 +182,24 @@ console.log("days", days);
 
 // CODE HERE
 
-let fujiTons = []
-let galaTons = []
-let pinkTons = []
+let fujiTons = []; // first we are creating 3 empty arrays in which we will use the .push method to add tons to 
+let galaTons = [];
+let pinkTons = [];
 
-let oneAcre = 6.5;
-
-
+let oneAcre = 6.5; // I am creating the variable oneAcre to store the information of how many tons of apples is equivalent to one acre
 
 
+for (let i = 0; i < fujiAcres.length; i++) {
+    fujiTons.push(fujiAcres[i] * oneAcre) // by using the .push() method 
+} for (let i = 0; i < galaAcres.length; i++) {
+    galaTons.push(galaAcres[i] * oneAcre)
+} for (let i = 0; i < pinkAcres.length; i++) {
+    pinkTons.push(galaAcres[i] * oneAcre)
+}
 
+console.log('pinkTons:', pinkTons);
+console.log('fujiTons:', fujiTons);
+console.log('galaTons:', galaTons);
 
 
 
@@ -218,10 +226,30 @@ let oneAcre = 6.5;
 // let fujiPounds =
 // let galaPounds =
 // let pinkPounds =
+let fujiTonTotal = 0; // we first have to initalize some variables to use as a counter 
+let galaTonTotal = 0;
+let pinkTonTotal = 0;
+for(let i = 0; i < fujiTons.length; i++) {
+fujiTonTotal = fujiTonTotal + fujiTons[i];
+} for(let i = 0; i < galaTons.length; i++) {
+galaTonTotal = galaTonTotal + galaTons[i]; 
+} for(let i = 0; i < pinkTons.length; i++) {
+    pinkTonTotal = pinkTonTotal + pinkTons[i];
+} totalTons = fujiTonTotal + galaTonTotal + pinkTonTotal;
 
+console.log(fujiTonTotal);
+console.log(galaTonTotal);
+console.log(pinkTonTotal);
+console.log(totalTons);
 
+let oneTon = 2000;
+let fujiPounds = fujiTonTotal * oneTon;
+let galaPounds = galaTonTotal * oneTon;
+let pinkPounds = pinkTonTotal * oneTon;
 
-
+console.log(fujiPounds);
+console.log(galaPounds);
+console.log(pinkPounds);
 
 
 // PROBLEM 6
@@ -242,14 +270,30 @@ let oneAcre = 6.5;
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiPriceCents = 0; /// we need to declare new variables at 0 so we have a counter 
+let galaPriceCents = 0;
+let pinkPriceCents = 0;
+
+fujiPriceCents = fujiPrice * fujiPounds; // this gives me the total price in cents for all of the fuji apples 
+galaPriceCents = galaPrice * galaPounds;
+pinkPriceCents = pinkPrice * pinkPounds;
 
 
+console.log(fujiPriceCents); // this console.log displays that the total profits from selling all the fuji apples is 173,550 cents
+console.log(galaPriceCents); // this displays that the total profits in cents from selling all the gala apples is 216,320 cents 
+console.log(pinkPriceCents); // this displays that the total profits from selling all the pink apples is 185,900.00000000003 cents 
 
+let fujiProfit = fujiPriceCents / 100; // I decided to convert the total profits in cents to the total profits in dollars
+// this takes the total profit in cents and divides it by 100 to find the dollar conversion, which for fuji apples is 1,735.5 dollars in profit 
+let galaProfit = galaPriceCents / 100; // this converts the profit from 216,320 cents to become 2,163.2
+let pinkProfit = pinkPriceCents / 100; // this convert the price from 185,900.00000000003 cents to 1,859.0000000000002 dollars
+console.log(fujiProfit);
+console.log(galaProfit);
+console.log(pinkProfit);
 
-
+// const fujiPrice = .89 
+// const galaPrice = .64
+// const pinkPrice = .55
 
 // PROBLEM 7
 
@@ -262,3 +306,7 @@ let oneAcre = 6.5;
 */
 
 // CODE HERE
+
+totalProfit = fujiProfit + galaProfit + pinkProfit;
+
+console.log(totalProfit); // this logs the total profits as 5,757.7 dollars of apple sales
