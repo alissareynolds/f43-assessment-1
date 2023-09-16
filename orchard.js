@@ -190,7 +190,8 @@ let oneAcre = 6.5; // I am creating the variable oneAcre to store the informatio
 
 
 for (let i = 0; i < fujiAcres.length; i++) {
-    fujiTons.push(fujiAcres[i] * oneAcre) // by using the .push() method 
+    fujiTons.push(fujiAcres[i] * oneAcre) // by using the .push() method we can multiple the fujiAcres by oneAcre and push the result into the new array
+    // this way we can use the code to multiply the number of acres picked each day by the tons of apples per acre - for example when the index is at 0 for the fujiAcres array, the number of acres is 2, so the code multiples 2 by 6.5 to get the tons of apples 
 } for (let i = 0; i < galaAcres.length; i++) {
     galaTons.push(galaAcres[i] * oneAcre)
 } for (let i = 0; i < pinkAcres.length; i++) {
@@ -229,8 +230,8 @@ console.log('galaTons:', galaTons);
 let fujiTonTotal = 0; // we first have to initalize some variables to use as a counter 
 let galaTonTotal = 0;
 let pinkTonTotal = 0;
-for(let i = 0; i < fujiTons.length; i++) {
-fujiTonTotal = fujiTonTotal + fujiTons[i];
+for(let i = 0; i < fujiTons.length; i++) { // the first statment of the for loop is the index at which you start the loop - the  loop will run until it gets to the end of the length of the array 
+fujiTonTotal = fujiTonTotal + fujiTons[i]; // finding the total tons for each array 
 } for(let i = 0; i < galaTons.length; i++) {
 galaTonTotal = galaTonTotal + galaTons[i]; 
 } for(let i = 0; i < pinkTons.length; i++) {
@@ -243,8 +244,8 @@ console.log(pinkTonTotal);
 console.log(totalTons);
 
 let oneTon = 2000;
-let fujiPounds = fujiTonTotal * oneTon;
-let galaPounds = galaTonTotal * oneTon;
+let fujiPounds = fujiTonTotal * oneTon; // once we have the total tons of eavh array, we times byt 2000 beacuse there is 2000 lb in 1 ton
+let galaPounds = galaTonTotal * oneTon; // this will tell us the total apples in pounds
 let pinkPounds = pinkTonTotal * oneTon;
 
 console.log(fujiPounds);
